@@ -1,62 +1,23 @@
-# 🔧 Core Dependencies
+cat > .gitignore <<EOF
+# Build & system
 node_modules/
-build/
 dist/
 .next/
 .output/
 .vercel/
+build/
+package-lock.json
+
+# Env
 .env
 .env.*.local
 
-# 🧪 Logs, OS, lockfiles
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# 💥 VS Code, Mac, System Files
+# OS & IDE
 .DS_Store
 .vscode/
 .idea/
-Thumbs.db
 
-# 📦 Archives & Zips
-*.zip
-*.tar
-*.gz
-
-# 🔍 Cache & Temp
-.cache/
-.tmp/
-.temp/
-.svelte-kit/
-coverage/
-*.tsbuildinfo
-*.tgz
-
-# 📸 Screenshots / User data (optional)
-*.png
-*.jpg
-*.jpeg
-*.webp
-*.mp4
-*.mov
-
-# 🧠 AI Agent Memory / Debug Dumps
-memory.json
-debug.log
-
-# ⚠️ Git artifacts
-.git/
-*.orig
-*.patch
-
-# 🏗 Azure Output
-.azure/
-
-# 🪝 GitHub Actions artifacts
-.github/workflows/*.bak.yml
+# Logs
+*.log
+npm-debug.log*
+EOF
