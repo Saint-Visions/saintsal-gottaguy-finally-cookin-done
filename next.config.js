@@ -6,9 +6,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    skipTrailingSlashRedirect: true,
-  },
+  skipTrailingSlashRedirect: true,
+  output: 'standalone',
 }
 
 module.exports = nextConfig
