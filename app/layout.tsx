@@ -1,8 +1,6 @@
-'use client';
-
-import '../styles/globals.css';
+import '../styles/globals.css'; // ✅ Correct CSS path
 import { ReactNode } from 'react';
-import { AppProvider } from './context';
+import { AppProvider } from './context'; // ✅ Your context wrapper
 
 export const metadata = {
   title: "SaintVisionAI™ - Cookin' Knowledge",
@@ -13,9 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <AppProvider>
-          {children}
-        </AppProvider>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );
