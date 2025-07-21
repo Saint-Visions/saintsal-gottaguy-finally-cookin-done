@@ -151,10 +151,16 @@ export default function Home() {
             <div className="relative group">
               <div className="relative glass-morphism p-4 rounded-2xl border border-gold-500/10 overflow-hidden">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa367cf7d34374aeda77c0f3bc41e33bb?format=webp&width=800"
-                  alt="SaintSal + You"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F460f1004f50a49a287f6baf649ee3901?format=webp&width=800"
+                  alt="SaintSal + You with Cookin' Knowledge"
                   className="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition-transform duration-500"
                 />
+                {/* GOTTA GUY™ Overlay */}
+                <div className="absolute top-4 left-4 right-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white font-dropline saintvision-gradient-text drop-shadow-2xl text-center">
+                    GOTTA GUY™
+                  </h3>
+                </div>
               </div>
             </div>
 
