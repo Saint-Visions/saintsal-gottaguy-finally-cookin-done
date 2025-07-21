@@ -16,6 +16,21 @@ export default function Home() {
         }}
       />
 
+      {/* Cookin' Knowledge Logo Overlay on Hero */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 2 }}>
+        <div className="relative" style={{ marginTop: "15vh", marginLeft: "2vw" }}>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc187b5e42e6c4411b2bfb3ddb744dc77?format=webp&width=800"
+            alt="Cookin' Knowledge"
+            className="w-32 h-auto object-contain opacity-75 mix-blend-soft-light"
+            style={{
+              filter: "brightness(1.1) saturate(0.9)",
+              transform: "rotate(-2deg) scale(0.9)",
+            }}
+          />
+        </div>
+      </div>
+
       {/* Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
         <div className="flex items-center space-x-4">
