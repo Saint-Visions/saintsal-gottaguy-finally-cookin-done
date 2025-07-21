@@ -1,6 +1,6 @@
 {
-  "devCommand": "npx @builder.io/dev-tools pull --projectId=fbedea3ff7564dc49e85bad31842d69c",
-  "serverUrl": "http://localhost:3000",
+  "devCommand": "npm run dev",
+  "serverUrl": "http://localhost:8080",
   "commitMode": "commits",
   "isLocal": true,
   "allowedCommands": [
@@ -16,9 +16,11 @@
     "git status",
     "git add *",
     "git commit *",
+    "git push *",
     "git pull *",
     "git fetch *",
     "git merge *",
+    "git remote *",
     "echo *",
     "cd *",
     "rm *",
