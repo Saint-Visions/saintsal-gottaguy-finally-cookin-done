@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import all working pages
 import Index from "./pages/Index";
+import WorkingHomepage from "./pages/WorkingHomepage";
 import Dashboard from "./pages/Dashboard";
 import Pricing from "./pages/Pricing";
 import SignIn from "./pages/SignIn";
