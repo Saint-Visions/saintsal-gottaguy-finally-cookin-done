@@ -118,6 +118,144 @@ export default function Index() {
         description="Bank-grade security meets faith-centered values. Your data protected with military-grade encryption and ethical business practices."
       />
 
+            {/* What Separates Us - SaintVisionAI vs PartnerTech AI */}
+      <div className="relative z-40 py-32 bg-gradient-to-r from-charcoal-800/80 to-charcoal-900/80">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white font-dialien">
+              What Separates <span className="saintvision-gradient-text">SaintVisionAI</span>
+            </h2>
+            <p className="text-xl text-gold-300 font-medium mb-4">
+              FROM PARTNERTECH AI & EVERYONE ELSE
+            </p>
+            <p className="text-lg text-white/80 max-w-4xl mx-auto">
+              While others focus on retail POS systems and generic solutions, we built enterprise AI that understands your business, values, and vision.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+            {/* SaintVisionAI Side */}
+            <div className="bg-gradient-to-br from-gold-500/10 to-gold-600/10 p-8 rounded-3xl border border-gold-400/20 backdrop-blur-sm">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F863b231460314ff6a606ebae2dd4912a?format=webp&width=800"
+                    alt="SaintVisionAI"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <h3 className="text-3xl font-bold saintvision-gradient-text mb-2">
+                  SaintVisionAI™
+                </h3>
+                <p className="text-gold-300 font-medium">Enterprise AI Companion</p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Faith-aligned business intelligence</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Dual AI systems (GPT-4o + Azure)</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">GoHighLevel CRM integration</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Real-time business strategy</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Patent-protected proprietary tech</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Enterprise-grade security vault</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gold-400 rounded-full"></div>
+                  <span className="text-white">Natural conversation interface</span>
+                </div>
+              </div>
+            </div>
+
+            {/* PartnerTech AI Side */}
+            <div className="bg-gradient-to-br from-gray-500/10 to-gray-600/10 p-8 rounded-3xl border border-gray-400/20 backdrop-blur-sm">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-gray-400">PT</span>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-300 mb-2">
+                  PartnerTech AI
+                </h3>
+                <p className="text-gray-400 font-medium">Retail POS Solutions</p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">Self-checkout hardware focus</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">Retail/hospitality industry specific</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">POS terminal integration</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">Transaction fraud prevention</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">Hardware-dependent solutions</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">Limited to point-of-sale</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-300">No business intelligence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Differentiators */}
+          <div className="text-center bg-gradient-to-r from-gold-900/30 to-gold-800/30 rounded-3xl p-12 border border-gold-500/20 backdrop-blur-sm">
+            <h3 className="text-4xl font-bold mb-6 saintvision-gradient-text">
+              The Clear Choice for Business Leaders
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 text-left">
+              <div className="space-y-3">
+                <h4 className="text-xl font-bold text-gold-300">Your Business Partner</h4>
+                <p className="text-white/80">
+                  Not just software - an AI companion that understands your industry, values, and vision for growth.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-xl font-bold text-gold-300">Complete Solution</h4>
+                <p className="text-white/80">
+                  From strategy to execution, CRM to analytics - everything you need in one faith-aligned platform.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-xl font-bold text-gold-300">Enterprise Ready</h4>
+                <p className="text-white/80">
+                  Patent-protected technology with bank-grade security that scales with your business empire.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Call-to-Action Section */}
       <SaintVisionCTA
         title="Elite AI Sanctuary"
