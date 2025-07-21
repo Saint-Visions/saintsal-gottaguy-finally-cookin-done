@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  experimental: {
-    appDir: true,
-  },
+  serverExternalPackages: ['@builder.io/sdk-react'],
   images: {
     domains: ['cdn.builder.io'],
     remotePatterns: [
@@ -35,6 +32,6 @@ const nextConfig = {
       },
     ]
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
