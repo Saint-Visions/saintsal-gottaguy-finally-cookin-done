@@ -51,9 +51,9 @@ export default function Home() {
           </a>
           <a href="/why" className="text-white/80 hover:text-gold-300 transition-colors flex items-center space-x-2">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4f08aaff66374bf3bd72e740c34ecf44"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa367cf7d34374aeda77c0f3bc41e33bb?format=webp&width=800"
               alt="SaintSal + You"
-              className="w-6 h-6 object-contain"
+              className="w-6 h-6 object-contain rounded"
             />
             <span>Why Us</span>
           </a>
