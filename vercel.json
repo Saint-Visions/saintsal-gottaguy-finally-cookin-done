@@ -9,11 +9,6 @@
     "NEXT_PUBLIC_SUPABASE_URL": "https://kweiqpogpqnywmhswvlf.supabase.co",
     "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt3ZWlxcG9ncHFueXdtaHN3dmxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNjUwOTYsImV4cCI6MjA2Njk0MTA5Nn0.axMzUqE-TRAMBzdPI_qvaagQKzgIs6wasYXav9cLs6k"
   },
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/:path*",
