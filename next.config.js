@@ -7,14 +7,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   skipTrailingSlashRedirect: true,
-  output: 'export',
-  distDir: 'out',
-  trailingSlash: true,
+  output: 'standalone',
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
   },
 }
 
