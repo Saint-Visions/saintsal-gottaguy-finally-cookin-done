@@ -20,4 +20,5 @@ const createSupabaseClient = () => {
         onAuthStateChange: () => ({ data: { subscription: null } }),
       },
       from: () => ({
-        select: () => Promise.resolve(
+        select: () => Promise.resolve({ data: [], error: null })
+      }),
