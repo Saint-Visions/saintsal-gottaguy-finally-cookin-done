@@ -104,7 +104,7 @@ export default function Home() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc187b5e42e6c4411b2bfb3ddb744dc77?format=webp&width=800"
                   alt="Cookin' Knowledge"
-                  className="ml-3 w-12 h-12 object-contain group-hover:scale-110 transition-transform cursor-pointer"
+                  className="ml-3 w-36 h-36 object-contain group-hover:scale-110 transition-transform cursor-pointer"
                 />
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
