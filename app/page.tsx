@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { ArrowRight, Shield, Brain, Zap, Crown, Users, Globe, Lock, Sparkles, CheckCircle } from 'lucide-react';
+import { ArrowRight, Shield, Brain, Zap, Crown, Users, Globe, Lock, Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
