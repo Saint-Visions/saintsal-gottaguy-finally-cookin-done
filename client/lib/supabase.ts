@@ -19,6 +19,12 @@ const createSupabaseClient = () => {
         signOut: () => Promise.resolve({ error: null }),
         onAuthStateChange: () => ({ data: { subscription: null } }),
       },
-      from: () => ({
-        select: () => Promise.resolve({ data: [], error: null })
-      }),
+            from: () => ({
+              select: () => Promise.resolve({ data: [], error: null })
+            }),
+          };
+        }
+        return createClient(supabaseUrl, supabaseAnonKey);
+      };
+      
+      export default createSupabaseClient;
