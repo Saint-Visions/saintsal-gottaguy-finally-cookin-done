@@ -1,13 +1,22 @@
-'use client'
+'use client';
 
-import { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { builder, Builder } from '@builder.io/sdk-react';
+import { customComponents } from '@/lib/builder-registry';
 
-export function BuilderInit() {
+// ✅ Set your Builder.io API Key
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY || '065997bd13e4442e888a06852fcd61ba');
+
+export const BuilderInit = () => {
   useEffect(() => {
-    // Builder.io components are auto-initialized with the new SDK
-    // Component registration is handled in the root builder-registry.ts
-    console.log("Builder.io initialized")
-  }, [])
+    for (const { name, component, options } of customComponents) {
+      Builder.registerComponent(component, {
+        name,
+        ...options,
+      });
+    }
+  }, []);
 
-  return null // This component doesn't render anything
-}
+  return null;
+};
+
