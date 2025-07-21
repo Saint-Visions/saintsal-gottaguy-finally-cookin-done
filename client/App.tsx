@@ -39,12 +39,11 @@ import RouteScanner from "./routes/index";
 // SaintVision Homepage
 import SaintVisionHomepage from "./pages/SaintVisionHomepage";
 
-// Builder.io integration
-import BuilderPageHandler from "./pages/BuilderPageHandler";
+// Builder.io integration - DISABLED for homepage override fix
+// import BuilderPageHandler from "./pages/BuilderPageHandler";
 // import { initializeBuilderComprehensive } from "./lib/builder-init";
 
-// TEMPORARILY DISABLE Builder.io to fix homepage render
-// initializeBuilderComprehensive();
+// Builder.io is completely disabled to prevent homepage override
 
 const queryClient = new QueryClient();
 
