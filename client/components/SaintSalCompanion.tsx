@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
-import { useEffect, useState } from "react";
-import { Chat } from "@components/Chat"; // ✅ Make sure this exists
-import { useUser } from "@hooks/useUser"; // ✅ Returns { user }
-import { useSearchParams } from "next/navigation";
-
-export default function SaintSalCompanion() {
-  const [mode, setMode] = useState<"client" | "admin">("client");
-  const { user } = useUser();
-  const params = useSearchParams();
-
-  useEffect(() => {
-    const queryMode = params.get("mode");
-    if (queryMode === "admin" && user?.email === "ryan@saintvisions.com") {
-      setMode("admin");
-    }
-  }, [params, user]);
-
-  return (
-    <div className="w-full h-full">
-      <Chat
-        mode={mode}
-        userId={user?.id ?? ""}
-        userEmail={user?.email ?? ""}
-        streaming
-        showBranding
-      />
-    </div>
-  );
-}
-=======
 'use client';
 
 import React, { useState } from "react";
@@ -152,4 +119,3 @@ const SaintSalCompanion: React.FC<SaintSalCompanionProps> = ({
 };
 
 export default SaintSalCompanion;
->>>>>>> cb54c0e5 (🚀 BUILD 556: FINAL VICTORY! Builder.io integration complete - 17 months of work READY! 🎉)
