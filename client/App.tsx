@@ -41,10 +41,10 @@ import SaintVisionHomepage from "./pages/SaintVisionHomepage";
 
 // Builder.io integration
 import BuilderPageHandler from "./pages/BuilderPageHandler";
-import { initializeBuilderComprehensive } from "./lib/builder-init";
+// import { initializeBuilderComprehensive } from "./lib/builder-init";
 
-// Initialize Builder.io with comprehensive settings
-initializeBuilderComprehensive();
+// TEMPORARILY DISABLE Builder.io to fix homepage render
+// initializeBuilderComprehensive();
 
 const queryClient = new QueryClient();
 
