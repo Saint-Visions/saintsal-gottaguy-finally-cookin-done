@@ -55,9 +55,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
                 <Routes>
-                    {/* COMPLETELY BYPASS Builder.io - Use our comprehensive Index.tsx */}
-          <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Index />} />
+                              {/* EMERGENCY FIX - Use WorkingHomepage to bypass Builder.io cache */}
+          <Route path="/" element={<WorkingHomepage />} />
+          <Route path="/home" element={<WorkingHomepage />} />
+          <Route path="/index" element={<Index />} />
           <Route path="/__routes" element={<RouteScanner />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pricing" element={<Pricing />} />
