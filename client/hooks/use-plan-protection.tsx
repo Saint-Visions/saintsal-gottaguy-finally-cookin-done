@@ -1,41 +1,41 @@
-import { createClient } from "@supabase/supabase-js";
+"use client";
 
-// Use fallback NEXT_PUBLIC_ if VITE_ not available
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
-const supabaseAnonKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+import { useEffect, useState } from "react";
+import { supabaseClient } from "@/lib/supabase";
 
-/**
- * Factory to create Supabase Client instance.
- */
-export function createSupabaseClient() {
-  if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn("⚠️ Supabase environment variables missing. Using mock client for dev.");
-    return {
-      auth: {
-        getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-        signIn: () => Promise.resolve({ data: { user: null }, error: null }),
-        signUp: () => Promise.resolve({ data: { user: null }, error: null }),
-        signOut: () => Promise.resolve({ error: null }),
-        onAuthStateChange: () => ({ data: { subscription: null } }),
-      },
-      from: () => ({
-        select: () => Promise.resolve({ data: [], error: null }),
-        insert: () => Promise.resolve({ data: null, error: null }),
-        update: () => Promise.resolve({ data: null, error: null }),
-        delete: () => Promise.resolve({ data: null, error: null }),
-        eq: () => ({
-          eq: () => ({
-            single: () => Promise.resolve({ data: null, error: null }),
-          }),
-        }),
-      }),
-    } as any;
-  }
+// Hook to get user plan (default fallback = "free")
+export function useUserPlan() {
+  const [plan, setPlan] = useState<"free" | "pro" | "enterprise">("free");
 
-  return createClient(supabaseUrl, supabaseAnonKey);
+  useEffect(() => {
+    const fetchPlan = async () => {
+      const { data: { user } } = await supabaseClient.auth.getUser();
+
+      if (user) {
+        // Replace this with real metadata lookup if needed
+        const { data } = await supabaseClient
+          .from("profiles")
+          .select("plan")
+          .eq("id", user.id)
+          .single();
+
+        if (data?.plan) setPlan(data.plan);
+      }
+    };
+
+    fetchPlan();
+  }, []);
+
+  return { plan };
 }
 
-// 🔁 Shared instance for app-wide use
-export const supabaseClient = createSupabaseClient();
+// Wrapper for protected routes
+export function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  const { plan } = useUserPlan();
+
+  if (plan !== "pro" && plan !== "enterprise") {
+    return <div className="p-4 text-center text-red-500">🔒 You must upgrade to access this page.</div>;
+  }
+
+  return <>{children}</>;
+}
