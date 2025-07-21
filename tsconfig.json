@@ -68,14 +68,15 @@
     "skipLibCheck": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "client/**/*",
     "app/**/*",
+    "client/**/*",
+    "next-env.d.ts",
     "server/**/*",
-    "shared/**/*"
+    "shared/**/*",
+    "out/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
