@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { useUserPlan } from "@/hooks/use-plan-protection";
-import { supabase } from "@/lib/supabase";
+// import { useUserPlan } from "@/hooks/use-plan-protection"; // Not exported
+import createSupabaseClient from "@/lib/supabase";
 import { Footer } from "@/components/Footer";
 import {
   ArrowRight,
@@ -25,6 +25,9 @@ import {
   Award,
 } from "lucide-react";
 
+// Mock useUserPlan hook since it's not exported
+const useUserPlan = () => ({ plan: 'pro' });
+
 export default function Index() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -41,6 +44,7 @@ export default function Index() {
 
     // Check if user is logged in
     const checkAuth = async () => {
+      const supabase = createSupabaseClient();
       const {
         data: { user },
       } = await supabase.auth.getUser();

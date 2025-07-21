@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -479,7 +480,7 @@ export default function SignUp() {
                             handleInputChange("password", e.target.value)
                           }
                           className="bg-charcoal-800 border-charcoal-600 text-white placeholder:text-white/70 focus:border-gold-500 pl-12 pr-12"
-                          placeholder="••••••••"
+                          placeholder="•••••���••"
                           required
                         />
                         <button
