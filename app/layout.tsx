@@ -1,7 +1,6 @@
 import '../client/global.css'
 import { ReactNode } from 'react'
 import { ClientProviders } from '@/providers/ClientProviders'
-import { BuilderInit } from '@/components/BuilderInit'
 
 export const metadata = {
   title: 'SaintVisionAI™ - Cookin\' Knowledge',
@@ -51,7 +50,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ClientProviders>
-          <BuilderInit />
           {children}
         </ClientProviders>
       </body>
