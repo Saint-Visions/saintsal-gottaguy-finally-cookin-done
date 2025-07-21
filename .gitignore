@@ -1,5 +1,9 @@
-cat > .gitignore <<EOF
-# Build & system
+# 🛠 System + Editor Files
+.DS_Store
+.vscode/
+.idea/
+
+# ⚙️ Build Artifacts
 node_modules/
 dist/
 .next/
@@ -8,16 +12,11 @@ dist/
 build/
 package-lock.json
 
-# Env
+# 🔐 Environment Variables
 .env
 .env.*.local
 
-# OS & IDE
-.DS_Store
-.vscode/
-.idea/
-
-# Logs
+# 🧾 Logs
 *.log
 npm-debug.log*
-EOF
+.vercel
