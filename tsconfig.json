@@ -19,12 +19,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "client/*"
+        "client/*",
+        "./*"
       ],
       "@app/*": [
         "app/*"
       ],
       "@components/*": [
+        "components/*",
         "client/components/*"
       ],
       "@hooks/*": [
