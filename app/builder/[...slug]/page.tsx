@@ -1,5 +1,10 @@
 'use client'
 
+export async function generateStaticParams() {
+  // Return empty array for static export - no dynamic builder routes for now
+  return []
+}
+
 export default function BuilderPage() {
   return (
     <div className="min-h-screen bg-charcoal-900 text-white p-8">
