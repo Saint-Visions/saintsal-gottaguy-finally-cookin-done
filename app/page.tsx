@@ -134,6 +134,86 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Why Us / What Separates Us Section */}
+      <section className="relative z-40 py-20 bg-gradient-to-b from-charcoal-900/95 to-charcoal-800/90">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-dialien">
+              What Separates <span className="saintvision-gradient-text">SaintSal</span>
+            </h2>
+            <p className="text-xl text-gold-300 font-medium mb-4 uppercase tracking-wider">
+              Apple Meets OpenAI • Enterprise Ready
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - SaintSal + You Image */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-500/20 to-gold-600/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative glass-morphism p-8 rounded-3xl border border-gold-500/20 overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa367cf7d34374aeda77c0f3bc41e33bb?format=webp&width=800"
+                  alt="SaintSal + You"
+                  className="w-full h-auto object-contain rounded-2xl transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 via-transparent to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+
+            {/* Right Side - Why Us Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gold-500/20 rounded-xl flex items-center justify-center mt-1">
+                    <Brain className="w-5 h-5 text-gold-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Your AI Companion</h3>
+                    <p className="text-white/80">Not just another chatbot. SaintSal becomes your strategic business partner with faith-aligned values.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-blue-500/20 rounded-xl flex items-center justify-center mt-1">
+                    <Shield className="w-5 h-5 text-blue-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
+                    <p className="text-white/80">Bank-grade encryption meets moral business practices. Your data protected with integrity.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-purple-500/20 rounded-xl flex items-center justify-center mt-1">
+                    <Zap className="w-5 h-5 text-purple-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Dual AI Power</h3>
+                    <p className="text-white/80">GPT-4o + Azure Cognitive Services working together for unmatched business intelligence.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-gold-900/30 to-gold-800/20 rounded-2xl p-6 border border-gold-500/20">
+                <div className="flex items-center mb-4">
+                  <Crown className="w-6 h-6 text-gold-300 mr-3" />
+                  <h4 className="text-lg font-bold text-gold-300">Elite Advantage</h4>
+                </div>
+                <p className="text-white/90 mb-6">
+                  While others focus on retail POS systems, we built enterprise AI that understands your vision, values, and growth strategy.
+                </p>
+                <a href="/why">
+                  <button className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-charcoal-900 font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 saintvision-glow flex items-center justify-center group">
+                    Discover Why SaintSal
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="relative z-40 py-32 bg-charcoal-900">
         <div className="max-w-7xl mx-auto px-6">
