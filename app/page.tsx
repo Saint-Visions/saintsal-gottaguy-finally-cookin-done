@@ -76,18 +76,6 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative z-40 flex flex-col items-center justify-center min-h-[80vh] text-center px-6">
         <div className="transform transition-all duration-1000">
-          {/* Main Logo/Brand */}
-          <div className="mb-8">
-            <div className="relative inline-block -mt-1 -mb-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F5af1b2848cdd4695bab7fa0b4affb339"
-                alt="SaintVisionAI Logo"
-                className="h-60 object-contain mx-auto mb-11"
-                style={{ width: "367px" }}
-              />
-            </div>
-          </div>
-
           {/* Hero Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
             <span className="saintvision-gradient-text font-dialien">
@@ -95,7 +83,7 @@ export default function Home() {
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium font-dropline">
-            Cookin' Knowledge.
+            GOTTA GUY<span className="text-white text-5xl md:text-7xl font-bold tracking-tight">���</span>
           </h2>
 
           {/* Hero Subtitle */}
