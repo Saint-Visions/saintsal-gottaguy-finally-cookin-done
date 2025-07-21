@@ -1,5 +1,3 @@
-'use client'
-
 import Console from '@/pages/Console'
 
 export async function generateStaticParams() {
