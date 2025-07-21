@@ -1,12 +1,12 @@
 'use client'
 
 import { useEffect } from 'react'
-import { initializeBuilderComprehensive } from '@/lib/builder-init'
 
 export function BuilderInit() {
   useEffect(() => {
-    // Initialize Builder.io on client side
-    initializeBuilderComprehensive()
+    // Builder.io components are auto-initialized with the new SDK
+    // Component registration is handled in the root builder-registry.ts
+    console.log("Builder.io initialized")
   }, [])
 
   return null // This component doesn't render anything

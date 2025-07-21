@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "es6"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
     "module": "esnext",
     "moduleResolution": "bundler",
     "allowJs": true,
@@ -14,25 +18,52 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["client/*"],
-      "@app/*": ["app/*"],
-      "@components/*": ["client/components/*"],
-      "@hooks/*": ["client/hooks/*"],
-      "@lib/*": ["client/lib/*"],
-      "@pages/*": ["client/pages/*"],
-      "@styles/*": ["client/styles/*"],
-      "@ui/*": ["client/components/ui/*"],
-      "@shared/*": ["shared/*"],
-      "@server/*": ["server/*"],
-      "@public/*": ["public/*"],
-      "@supabase/*": ["client/lib/supabase/*"],
-      "@env/*": ["client/env/*"]
+      "@/*": [
+        "client/*"
+      ],
+      "@app/*": [
+        "app/*"
+      ],
+      "@components/*": [
+        "client/components/*"
+      ],
+      "@hooks/*": [
+        "client/hooks/*"
+      ],
+      "@lib/*": [
+        "client/lib/*"
+      ],
+      "@pages/*": [
+        "client/pages/*"
+      ],
+      "@styles/*": [
+        "client/styles/*"
+      ],
+      "@ui/*": [
+        "client/components/ui/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@server/*": [
+        "server/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@supabase/*": [
+        "client/lib/supabase/*"
+      ],
+      "@env/*": [
+        "client/env/*"
+      ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "skipLibCheck": true
   },
   "include": [
     "next-env.d.ts",
