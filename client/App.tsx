@@ -55,8 +55,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
                 <Routes>
-          {/* FORCE homepage to use our Index.tsx - NO Builder interference */}
+                    {/* COMPLETELY BYPASS Builder.io - Use our comprehensive Index.tsx */}
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Index />} />
           <Route path="/__routes" element={<RouteScanner />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pricing" element={<Pricing />} />
