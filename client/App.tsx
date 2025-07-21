@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Import all working pages
 import Index from "./pages/Index";
@@ -34,6 +34,9 @@ import ResearchRedirect from "./pages/ResearchRedirect";
 import Why from "./pages/Why";
 import SaintSalYou from "./pages/SaintSalYou";
 import Hacp from "./pages/Hacp";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import RouteScanner from "./routes/index";
 
@@ -53,12 +56,19 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+<<<<<<< HEAD
       <BrowserRouter>
                 <Routes>
                               {/* EMERGENCY FIX - Use WorkingHomepage to bypass Builder.io cache */}
           <Route path="/" element={<WorkingHomepage />} />
           <Route path="/home" element={<WorkingHomepage />} />
           <Route path="/index" element={<Index />} />
+=======
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <Routes>
+          {/* Core app routes - CRITICAL: Keep Index as exact root path */}
+          <Route path="/" element={<Index />} />
+>>>>>>> d00e2eb5ad145375cc805bf4fa27fea383d58b50
           <Route path="/__routes" element={<RouteScanner />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pricing" element={<Pricing />} />
@@ -88,13 +98,28 @@ const App = () => (
           <Route path="/saintsal-you" element={<SaintSalYou />} />
           <Route path="/hacp" element={<Hacp />} />
 
+          {/* Legal Pages */}
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/gdpr" element={<Privacy />} />
+          <Route path="/security" element={<Privacy />} />
+          <Route path="/data-processing" element={<Privacy />} />
+
           {/* SaintVision Homepage route */}
           <Route path="/saintvision" element={<SaintVisionHomepage />} />
 
+<<<<<<< HEAD
                     {/* Builder.io DISABLED - was overriding homepage */}
           {/* <Route path="/builder/*" element={<BuilderPageHandler />} /> */}
+=======
+          {/* Builder.io dynamic pages for content management - SPECIFIC PATHS ONLY */}
+          <Route path="/builder/*" element={<BuilderPageHandler />} />
+          <Route path="/cms/*" element={<BuilderPageHandler />} />
+          <Route path="/page/*" element={<BuilderPageHandler />} />
+>>>>>>> d00e2eb5ad145375cc805bf4fa27fea383d58b50
 
-          {/* Catch-all for 404 */}
+          {/* Catch-all for 404 - MUST BE LAST */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
