@@ -135,7 +135,7 @@ export default function Home() {
       </div>
 
       {/* Why Us / What Separates Us Section */}
-      <section className="relative z-40 py-20 bg-gradient-to-b from-charcoal-900/95 to-charcoal-800/90">
+      <section className="relative z-40 pt-8 pb-20 bg-gradient-to-b from-charcoal-900/95 to-charcoal-800/90">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-dialien">
