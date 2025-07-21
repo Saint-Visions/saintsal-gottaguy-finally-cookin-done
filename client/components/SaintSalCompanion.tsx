@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Chat } from "@/components/Chat";
+// Update the import path if necessary to the correct location of Chat
+import { Chat } from "./Chat";
 import { useUser } from "@/hooks/useUser";
 import { useSearchParams } from "next/navigation";
 

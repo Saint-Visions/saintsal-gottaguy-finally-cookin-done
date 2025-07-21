@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "es6"],
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,12 +15,15 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./client/*"],
-      "@components/*": ["./client/components/*"],
-      "@hooks/*": ["./client/hooks/*"],
-      "@lib/*": ["./client/lib/*"],
-      "@pages/*": ["./client/pages/*"],
-      "@shared/*": ["./shared/*"]
+      "@/*": ["client/*"],
+      "@components/*": ["client/components/*"],
+      "@hooks/*": ["client/hooks/*"],
+      "@lib/*": ["client/lib/*"],
+      "@pages/*": ["client/pages/*"],
+      "@styles/*": ["client/styles/*"],
+      "@shared/*": ["shared/*"],
+      "@server/*": ["server/*"],
+      "@public/*": ["public/*"]
     },
     "plugins": [
       {
