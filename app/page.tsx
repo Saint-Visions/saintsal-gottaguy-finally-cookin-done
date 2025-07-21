@@ -133,12 +133,24 @@ export default function Home() {
       <section className="relative z-40 pt-8 pb-20 bg-gradient-to-b from-charcoal-900/95 to-charcoal-800/90">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-dialien">
-              What Separates <span className="saintvision-gradient-text">SaintSal™</span>
-            </h2>
+            <div className="flex items-center justify-center mb-6">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fdb6dcd6625d74c0a829fe819087f8946?format=webp&width=800"
+                alt="What Separates Us"
+                className="w-16 h-16 object-contain mr-4"
+              />
+              <h2 className="text-4xl md:text-5xl font-bold text-white font-dialien">
+                What Separates <span className="saintvision-gradient-text">SaintSal™</span>
+              </h2>
+            </div>
             <p className="text-xl text-gold-300 font-medium mb-4 uppercase tracking-wider">
               Apple Meets OpenAI • Enterprise Ready
             </p>
+            <a href="/why" className="inline-block">
+              <button className="text-gold-300 hover:text-gold-200 text-lg font-semibold transition-colors duration-200 bg-transparent border border-gold-500/30 hover:border-gold-400/50 px-6 py-3 rounded-lg">
+                Discover Why →
+              </button>
+            </a>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
