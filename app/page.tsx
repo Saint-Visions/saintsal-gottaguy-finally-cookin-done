@@ -101,6 +101,11 @@ export default function Home() {
             <a href="/dashboard">
               <button className="text-yellow-400 hover:text-yellow-300 text-xl font-semibold transition-all duration-200 bg-transparent border-none shadow-none hover:bg-transparent group hover:drop-shadow-[0_0_12px_rgba(250,204,21,0.9)] px-8 py-4 flex items-center">
                 Start Cookin' Knowledge
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc187b5e42e6c4411b2bfb3ddb744dc77?format=webp&width=800"
+                  alt="Cookin' Knowledge"
+                  className="ml-2 w-6 h-6 object-contain group-hover:scale-110 transition-transform cursor-pointer"
+                />
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </a>
