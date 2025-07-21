@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// Update the import path if necessary to the correct location of Chat
-import { Chat } from "./Chat";
-import { useUser } from "@/hooks/useUser";
+import { Chat } from "@components/Chat"; // ✅ Make sure this exists
+import { useUser } from "@hooks/useUser"; // ✅ Returns { user }
 import { useSearchParams } from "next/navigation";
 
 export default function SaintSalCompanion() {
