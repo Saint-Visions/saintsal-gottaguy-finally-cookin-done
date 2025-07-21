@@ -89,8 +89,8 @@ const App = () => (
           {/* SaintVision Homepage route */}
           <Route path="/saintvision" element={<SaintVisionHomepage />} />
 
-          {/* Builder.io dynamic pages for content management */}
-          <Route path="/builder/*" element={<BuilderPageHandler />} />
+                    {/* Builder.io DISABLED - was overriding homepage */}
+          {/* <Route path="/builder/*" element={<BuilderPageHandler />} /> */}
 
           {/* Catch-all for 404 */}
           <Route path="*" element={<NotFound />} />
