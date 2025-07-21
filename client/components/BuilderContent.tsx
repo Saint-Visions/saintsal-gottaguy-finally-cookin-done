@@ -1,9 +1,6 @@
 import React from "react";
-import { Content } from "@builder.io/sdk-react";
 
-// Builder should already be initialized in App.tsx via builder-init.ts
-// Don't initialize or register components here to avoid conflicts
-
+// Placeholder component - Builder.io integration disabled for build
 interface BuilderContentProps {
   model: string;
   content?: any;
@@ -18,13 +15,12 @@ export const BuilderContent: React.FC<BuilderContentProps> = ({
   options = {},
 }) => {
   return (
-    <Content
-      apiKey={process.env.NEXT_PUBLIC_BUILDER_API_KEY!}
-      model={model}
-      content={content}
-      data={data}
-      {...options}
-    />
+    <div className="min-h-screen bg-charcoal-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-gold-300 mb-4">Builder Content</h1>
+        <p className="text-white/80">Builder.io integration temporarily disabled for build.</p>
+      </div>
+    </div>
   );
 };
 
