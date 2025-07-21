@@ -3,9 +3,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run clean && next build",
+    "build:vercel": "next build",
+    "build:azure": "next build && next export",
     "start": "next start",
     "lint": "next lint",
+    "clean": "node scripts/cleanup-build.js",
+    "typecheck": "tsc --noEmit",
     "builder:sync": "builder sync --model page --apiKey=065997bd13e4442e888a06852fcd61ba"
   },
   "dependencies": {
