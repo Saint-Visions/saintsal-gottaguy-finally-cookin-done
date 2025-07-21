@@ -412,8 +412,8 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-6 h-6 text-blue-300" />
               </div>
-              <h4 className="font-semibold mb-2 text-blue-300">Zero-Trust</h4>
-              <p className="text-white/70 text-sm">Role-based access control</p>
+              <h4 className="font-semibold mb-2 text-blue-300">Smart Access</h4>
+              <p className="text-white/70 text-sm">Role-based permissions</p>
             </div>
             <div className="glass-morphism p-6 rounded-xl text-center border border-purple-500/10">
               <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
