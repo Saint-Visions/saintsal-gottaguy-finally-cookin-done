@@ -7,7 +7,15 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   skipTrailingSlashRedirect: true,
-  output: 'standalone',
+  output: 'export',
+  distDir: 'out',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 }
 
 module.exports = nextConfig
