@@ -97,8 +97,8 @@ export default function Home() {
               SaintSal™
             </span>
           </h1>
-          <h2 className="text-3xl md:text-4xl text-gold-300 mb-6 font-light tracking-[0.2em] uppercase">
-            <span className="font-mono font-thin text-gold-300">GOTTA GUY</span><span className="text-white text-lg font-normal align-top">™</span>
+          <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium font-dropline">
+            GOTTA GUY™
           </h2>
 
           {/* Hero Subtitle */}
