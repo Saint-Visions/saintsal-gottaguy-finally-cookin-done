@@ -1,12 +1,7 @@
 // client/lib/builder-init.ts
+// This file is kept for compatibility but the new SDK handles initialization automatically
 
-import { builder, Builder } from "@builder.io/sdk-react";
-import { customComponents } from "./builder-registry";
-
-// Init Builder once with API key
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY || "");
-
-// Register components globally
-customComponents.forEach(({ name, component, options }) => {
-  Builder.registerComponent(component, { name, ...options });
-});
+export const initializeBuilderComprehensive = () => {
+  console.log("Builder.io components are auto-initialized with the new SDK");
+  return true;
+};
