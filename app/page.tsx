@@ -139,7 +139,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-dialien">
-              What Separates <span className="saintvision-gradient-text">SaintSal</span>
+              What Separates <span className="saintvision-gradient-text">SaintSal™</span>
             </h2>
             <p className="text-xl text-gold-300 font-medium mb-4 uppercase tracking-wider">
               Apple Meets OpenAI • Enterprise Ready
@@ -149,14 +149,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - SaintSal + You Image */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-500/20 to-gold-600/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative glass-morphism p-8 rounded-3xl border border-gold-500/20 overflow-hidden">
+              <div className="relative glass-morphism p-4 rounded-2xl border border-gold-500/10 overflow-hidden">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa367cf7d34374aeda77c0f3bc41e33bb?format=webp&width=800"
                   alt="SaintSal + You"
-                  className="w-full h-auto object-contain rounded-2xl transform group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 via-transparent to-transparent rounded-2xl"></div>
               </div>
             </div>
 
@@ -168,8 +166,8 @@ export default function Home() {
                     <Brain className="w-5 h-5 text-gold-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Your AI Companion</h3>
-                    <p className="text-white/80">Not just another chatbot. SaintSal becomes your strategic business partner with faith-aligned values.</p>
+                    <h3 className="text-xl font-bold text-white mb-2">Beyond ChatGPT Confusion</h3>
+                    <p className="text-white/80">Tired of not knowing how to use ChatGPT effectively? SaintSal™ becomes your strategic AI companion with dual AI systems that actually understand your business.</p>
                   </div>
                 </div>
 
@@ -178,8 +176,8 @@ export default function Home() {
                     <Shield className="w-5 h-5 text-blue-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
-                    <p className="text-white/80">Bank-grade encryption meets moral business practices. Your data protected with integrity.</p>
+                    <h3 className="text-xl font-bold text-white mb-2">Enterprise vs Retail</h3>
+                    <p className="text-white/80">While PartnerTech focuses on retail POS systems, we built faith-aligned enterprise AI with bank-grade security and moral business practices.</p>
                   </div>
                 </div>
 
@@ -188,8 +186,8 @@ export default function Home() {
                     <Zap className="w-5 h-5 text-purple-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Dual AI Power</h3>
-                    <p className="text-white/80">GPT-4o + Azure Cognitive Services working together for unmatched business intelligence.</p>
+                    <h3 className="text-xl font-bold text-white mb-2">Dual AI Intelligence</h3>
+                    <p className="text-white/80">GPT-4o + Azure Cognitive Services working together. No more guessing how to prompt AI - we handle the complexity for enterprise results.</p>
                   </div>
                 </div>
               </div>
@@ -200,11 +198,11 @@ export default function Home() {
                   <h4 className="text-lg font-bold text-gold-300">Elite Advantage</h4>
                 </div>
                 <p className="text-white/90 mb-6">
-                  While others focus on retail POS systems, we built enterprise AI that understands your vision, values, and growth strategy.
+                  Stop struggling with ChatGPT prompts. SaintSal™ delivers enterprise-grade AI that understands your vision, values, and growth strategy from day one.
                 </p>
                 <a href="/why">
                   <button className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-charcoal-900 font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 saintvision-glow flex items-center justify-center group">
-                    Discover Why SaintSal
+                    Learn More & Sign Up
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </a>
