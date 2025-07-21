@@ -16,20 +16,7 @@ export default function Home() {
         }}
       />
 
-      {/* Cookin' Knowledge Pin on Hero */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 2 }}>
-        <div className="relative" style={{ marginTop: "20vh", marginLeft: "-5vw" }}>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc187b5e42e6c4411b2bfb3ddb744dc77?format=webp&width=800"
-            alt="Cookin' Knowledge Pin"
-            className="w-16 h-auto object-contain opacity-80"
-            style={{
-              filter: "brightness(1.2) contrast(1.1)",
-              transform: "rotate(-1deg)",
-            }}
-          />
-        </div>
-      </div>
+
 
       {/* Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
