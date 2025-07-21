@@ -1,40 +1,31 @@
-import { createClient } from "@supabase/supabase-js";
+"use client";
 
-// Use NEXT_PUBLIC_ variables as fallback
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://your-default-url.supabase.co";
+import { useEffect, useState } from "react";
+import { Chat } from "@/components/Chat";
+import { useUser } from "@/hooks/useUser";
+import { useSearchParams } from "next/navigation";
 
-const supabaseAnonKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-default-anon-key";
+export default function SaintSalCompanion() {
+  const [mode, setMode] = useState<"client" | "admin">("client");
+  const { user } = useUser();
+  const params = useSearchParams();
 
-// Runtime-safe Supabase client factory
-export function createSupabaseClient() {
-  if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn("⚠️ Missing Supabase env vars. Using mock client.");
-    return {
-      auth: {
-        getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-        signIn: () => Promise.resolve({ data: { user: null }, error: null }),
-        signUp: () => Promise.resolve({ data: { user: null }, error: null }),
-        signOut: () => Promise.resolve({ error: null }),
-        onAuthStateChange: () => ({ data: { subscription: null } }),
-      },
-      from: () => ({
-        select: () => Promise.resolve({ data: [], error: null }),
-        insert: () => Promise.resolve({ data: null, error: null }),
-        update: () => Promise.resolve({ data: null, error: null }),
-        delete: () => Promise.resolve({ data: null, error: null }),
-        eq: () => ({
-          eq: () => ({
-            single: () => Promise.resolve({ data: null, error: null }),
-          }),
-        }),
-      }),
-    } as any;
-  }
+  useEffect(() => {
+    const queryMode = params.get("mode");
+    if (queryMode === "admin" && user?.email === "ryan@saintvisions.com") {
+      setMode("admin");
+    }
+  }, [params, user]);
 
-  return createClient(supabaseUrl, supabaseAnonKey);
+  return (
+    <div className="w-full h-full">
+      <Chat
+        mode={mode}
+        userId={user?.id ?? ""}
+        userEmail={user?.email ?? ""}
+        streaming
+        showBranding
+      />
+    </div>
+  );
 }
-
-// ✅ Primary singleton instance
-export const supabase = createSupabaseClient();
