@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { builder } from "@builder.io/react";
+import { builder, Builder } from "@builder.io/react";
+
 import BuilderContent from "@/components/BuilderContent";
 import { Footer } from "@/components/Footer";
-import { customComponents } from "../../builder-registry"; // ✅ Corrected import path
+import { customComponents } from "@/lib/builder-registry";
 
 // ✅ Initialize Builder
-builder.init(
-  process.env.VITE_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba"
-);
+builder.init(process.env.VITE_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba");
 
-// ✅ Register custom components
+// ✅ Register all custom Builder components
 customComponents.forEach((component) => {
-  try {
-    // @ts-expect-error: Builder type may not be imported here, but this is the correct usage
-    import { Builder } from "@builder.io/react";
-    Builder.registerComponent(component.component, component);
-    console.log(`🔧 Registered Builder component: ${component.name}`);
-  } catch (err) {
-    console.warn(`❌ Failed to register component ${component.name}`, err);
-  }
+  Builder.registerComponent(component.component, component);
 });
 
 export default function BuilderPage() {
@@ -42,7 +34,7 @@ export default function BuilderPage() {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("❌ Error fetching Builder content:", error);
+        console.error("Error fetching Builder content:", error);
         setLoading(false);
       });
   }, [location.pathname]);
@@ -66,8 +58,7 @@ export default function BuilderPage() {
         <div className="text-center max-w-md">
           <h1 className="text-4xl font-bold mb-4 text-gold-300">404</h1>
           <p className="text-white/80 mb-6">
-            Page not found. Make sure you have your content published at
-            Builder.io.
+            Page not found. Make sure you have your content published at Builder.io.
           </p>
           <a
             href="/"
