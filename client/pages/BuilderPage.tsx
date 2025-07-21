@@ -3,29 +3,28 @@ import { useParams, useLocation } from "react-router-dom";
 import { builder } from "@builder.io/react";
 import BuilderContent from "@/components/BuilderContent";
 import { Footer } from "@/components/Footer";
+import { customComponents } from "../../builder-registry"; // ✅ Corrected import path
 
-// ✅ Correct relative import path — adjust if your registry is elsewhere
-import { customComponents } from "@/lib/builder-registry"; // update path if needed
+// ✅ Initialize Builder
+builder.init(
+  process.env.VITE_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba"
+);
 
-// ✅ Init Builder safely
-const BUILDER_API_KEY =
-  process.env.NEXT_PUBLIC_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba";
-
-builder.init(BUILDER_API_KEY);
-
-// ✅ Register custom Builder.io components
+// ✅ Register custom components
 customComponents.forEach((component) => {
   try {
-    builder.registerComponent(component.component, component);
+    // @ts-expect-error: Builder type may not be imported here, but this is the correct usage
+    import { Builder } from "@builder.io/react";
+    Builder.registerComponent(component.component, component);
+    console.log(`🔧 Registered Builder component: ${component.name}`);
   } catch (err) {
-    console.error(`Builder component registration failed: ${component.name}`, err);
+    console.warn(`❌ Failed to register component ${component.name}`, err);
   }
 });
 
 export default function BuilderPage() {
   const { "*": slug } = useParams();
   const location = useLocation();
-
   const [content, setContent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -38,12 +37,12 @@ export default function BuilderPage() {
         prerender: false,
       })
       .promise()
-      .then((result) => {
-        setContent(result);
+      .then((content) => {
+        setContent(content);
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error loading Builder content:", error);
+        console.error("❌ Error fetching Builder content:", error);
         setLoading(false);
       });
   }, [location.pathname]);
@@ -67,7 +66,8 @@ export default function BuilderPage() {
         <div className="text-center max-w-md">
           <h1 className="text-4xl font-bold mb-4 text-gold-300">404</h1>
           <p className="text-white/80 mb-6">
-            Page not found. Make sure you have your content published in Builder.io
+            Page not found. Make sure you have your content published at
+            Builder.io.
           </p>
           <a
             href="/"
