@@ -83,7 +83,7 @@ export default function Home() {
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium font-dropline">
-            GOTTA GUY<span className="text-white text-5xl md:text-7xl font-bold tracking-tight">���</span>
+            GOTTA GUY<span className="text-white text-5xl md:text-7xl font-bold tracking-tight">™</span>
           </h2>
 
           {/* Hero Subtitle */}
@@ -139,7 +139,7 @@ export default function Home() {
             <div className="relative group">
               <div className="relative glass-morphism p-4 rounded-2xl border border-gold-500/10 overflow-hidden">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F460f1004f50a49a287f6baf649ee3901?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/frame-1000002501-dcc999"
                   alt="SaintSal + You with Cookin' Knowledge"
                   className="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition-transform duration-500"
                 />
