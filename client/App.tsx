@@ -54,8 +54,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          {/* Core app routes */}
+                <Routes>
+          {/* FORCE homepage to use our Index.tsx - NO Builder interference */}
           <Route path="/" element={<Index />} />
           <Route path="/__routes" element={<RouteScanner />} />
           <Route path="/dashboard" element={<Dashboard />} />
