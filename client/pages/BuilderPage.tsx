@@ -1,15 +1,19 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { builder, Builder } from "@builder.io/react";
 
-import BuilderContent from "@/components/BuilderContent";
-import { Footer } from "@/components/Footer";
-import { customComponents } from "@/lib/builder-registry";
+import BuilderContent from "@components/BuilderContent";
+import { Footer } from "@components/Footer";
+import { customComponents } from "@lib/builder-registry";
 
-// ✅ Initialize Builder
-builder.init(process.env.VITE_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba");
+// ✅ Initialize Builder.io
+builder.init(
+  process.env.NEXT_PUBLIC_BUILDER_API_KEY || "065997bd13e4442e888a06652fcd61ba"
+);
 
-// ✅ Register all custom Builder components
+// ✅ Register components once on mount
 customComponents.forEach((component) => {
   Builder.registerComponent(component.component, component);
 });
@@ -21,20 +25,18 @@ export default function BuilderPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const urlPath = location.pathname;
-
     builder
       .get("page", {
-        url: urlPath,
+        url: location.pathname,
         prerender: false,
       })
       .promise()
-      .then((content) => {
-        setContent(content);
+      .then((res) => {
+        setContent(res);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Error fetching Builder content:", error);
+      .catch((err) => {
+        console.error("❌ Error fetching Builder.io content:", err);
         setLoading(false);
       });
   }, [location.pathname]);
@@ -58,7 +60,7 @@ export default function BuilderPage() {
         <div className="text-center max-w-md">
           <h1 className="text-4xl font-bold mb-4 text-gold-300">404</h1>
           <p className="text-white/80 mb-6">
-            Page not found. Make sure you have your content published at Builder.io.
+            Page not found. Make sure it's published in Builder.io.
           </p>
           <a
             href="/"
